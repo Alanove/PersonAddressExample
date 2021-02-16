@@ -1,0 +1,23 @@
+.panel-details{
+    width:200px;
+    background:#fff;
+    padding:10px;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    margin-left: 20px;
+
+    &.visible{
+        right:0;
+    }
+    label{
+        display: block;
+        font-weight: bold;
+        margin:5px 0;
+    }
+    input{
+        display: block;
+        width:100%;
+    }
+    select{
+        width: 100%;;
+    }
+}

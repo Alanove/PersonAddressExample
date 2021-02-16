@@ -1,0 +1,45 @@
+<div *ngIf="address" class="panel-details">
+    <div>
+      <label>Person:
+        <select type="string" [(ngModel)]="address.personId">
+            <option *ngFor="let person of persons" [ngValue]="person.personId">{{person.firstName}} {{person.lastName}}</option>
+          </select>
+      </label>
+    </div>
+    <div>
+        <label>Address Line 1:
+          <input [(ngModel)]="address.addressLine1" />
+        </label>
+      </div>
+    <div>
+        <label>Address Line 2:
+          <input [(ngModel)]="address.addressLine2" required />
+        </label>
+      </div>
+      <div>
+        <label>City:
+          <input [(ngModel)]="address.city" />
+        </label>
+      </div>
+      <div>
+        <label>State:
+          <input [(ngModel)]="address.state" />
+        </label>
+      </div>
+      <div>
+        <label>Postal Code:
+          <input [(ngModel)]="address.postalCode" />
+        </label>
+      </div>
+      <div>
+        <label>Country:
+            <select type="string" [(ngModel)]="address.countryCode">
+                <option *ngFor="let country of countries" [ngValue]="country.code">{{country.name}}</option>
+              </select>
+        </label>
+      </div>
+
+      <div>
+          <button  (click)="save()">Save</button>
+      </div>
+    </div>

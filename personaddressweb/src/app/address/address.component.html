@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+<button (click)="createAddress()">Add Address</button>
+<BR><BR>
+ <div class=main>
+<table cellpadding=0 cellspacing=0>
+    <thead>
+        <th>Person</th>
+        <th>Address Line 1</th>
+        <th>Address Line 2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Postal Code</th>
+        <th>Country</th>
+        <th></th>   
+    </thead>
+    <tr *ngFor="let address of addresses">
+        <td>{{address.firstName}} {{address.lastName}}</td>
+        <td>{{address.addressLine1}}</td>
+        <td>{{address.addressLine2}}</td>
+        <td>{{address.city}}</td>
+        <td>{{address.state}}</td>
+        <td>{{address.postalCode}}</td>
+        <td>{{address.countryName}}</td>
+        <td>
+                <button (click)="edit(address)">Edit</button>&nbsp;
+                <button (click)="delete(address)">Delete</button>
+        </td>
+    </tr>
+</table>
+<app-address-details [address]="selectedAddress" (refreshData)="getAddresses()"></app-address-details>
+</div>

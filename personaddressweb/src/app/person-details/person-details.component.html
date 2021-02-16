@@ -1,0 +1,30 @@
+<div *ngIf="person" class="panel-details">
+    <div>
+      <label>First Name:
+        <input [(ngModel)]="person.firstName" required />
+      </label>
+    </div>
+    <div>
+        <label>Middle Name:
+          <input [(ngModel)]="person.middleName" />
+        </label>
+      </div>
+    <div>
+        <label>Last Name:
+          <input [(ngModel)]="person.lastName" required />
+        </label>
+      </div>
+      <div>
+        <label>Mobile Phone:
+          <input [(ngModel)]="person.mobilePhone" />
+        </label>
+      </div>
+      <div>
+        <label>Email:
+          <input [(ngModel)]="person.email" />
+        </label>
+      </div>
+      <div>
+          <button (click)="save()">Save</button>
+      </div>
+    </div>

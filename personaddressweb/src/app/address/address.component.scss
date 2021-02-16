@@ -1,0 +1,21 @@
+$gray: "#550000";
+$text: "#333";
+$blue: "#1976d2";
+$darkGray:"#33000";
+
+table {
+    width:100%;
+    th{
+        background-color: #bfbfbf;
+        padding: 10px;
+        text-align: left;
+    }
+    td{
+        padding:10px;
+        border-bottom: 1px solid #330000;
+    }
+}
+
+.main{
+    display: flex;
+}
